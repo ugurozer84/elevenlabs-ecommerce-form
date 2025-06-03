@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Asistan - Hemen Sizi Arayalım</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- AI Asistan Bölümü -->
+        <div class="ai-assistant-section">
+            <div class="ai-card">
+                <div class="ai-header">
+                    <div class="ai-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-title">
+                        <h3>AI Asistanımız Sizi Hemen Arasın</h3>
+                        <p>Ürünlerimiz hakkında detaylı bilgi almak için telefon numaranızı bırakın</p>
+                    </div>
+                </div>
+
+                <form class="phone-form">
+                    <div class="form-group">
+                        <label for="phoneNumber">
+                            <i class="fas fa-phone"></i>
+                            Telefon Numaranız
+                        </label>
+                        <div class="phone-input-container">
+                            <span class="country-code">+90</span>
+                            <input 
+                                type="tel" 
+                                id="phoneNumber" 
+                                placeholder="5XX XXX XX XX"
+                                maxlength="13"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <button type="button" id="callButton" class="call-button">
+                        <span class="button-text">
+                            <i class="fas fa-phone"></i>
+                            Hemen Ara
+                        </span>
+                        <div class="loading-spinner" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                </form>
+
+                <div id="callStatus" class="call-status" style="display: none;"></div>
+
+                <div class="ai-features">
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>5 saniye içinde arıyoruz</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Uzman AI asistan</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Güvenli ve hızlı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
